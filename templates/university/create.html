@@ -1,0 +1,18 @@
+ {% extends 'university/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div style="display: flex; width: 100%">
+    <form method="post" class="col-md-6 mt-5" style="margin: 0 auto">
+        {% csrf_token %}
+        {{ form.name }}<br>
+        {{ form.surname }}<br>
+        {{ form.age }}<br>
+        {{ form.gpa }}<br>
+        {{ form.comment }}<br>
+        <span>{{ error }}</span>
+        <button class="btn btn-dark" type="submit">Create</button>
+    </form>
+    </div>
+{% endblock %}

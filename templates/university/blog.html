@@ -1,0 +1,163 @@
+{% extends 'university/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!------------------------------
+        					BLOG
+        					---------------------------- -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-lg-6 col-12">
+                    <h2 class="mb-4">Student Government Committees
+                    </h2>
+    
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>Monday</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>The Academics & Co-ops </span></h3>
+                                <p>The Academics & Co-ops Committee discusses and proposes solutions on issues relating to
+                                    academic and co-op affairs as well as promote ideas for improvement at RIT.</p>
+                            </div>
+                        </div>
+    
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>Tuesday</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Facilities, Parking and Pransportation</span></h3>
+                                <p>Facilities looks at the buildings, operating times, and furnishings on campus. All issues
+                                    related to parking and transportation services at RIT fall under this committee. </p>
+                            </div>
+                        </div>
+    
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>Thursday</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Student affairs</span></h3>
+                                <p>Taking on many of the costs associated with improving student life, some of the ongoing
+                                    expenses of the student affairs committee include services such as improving counseling
+                                    and psychological services and setting up a study abroad scholarship fund.</p>
+                            </div>
+                        </div>
+    
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>Friday</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Sustainability</span></h3>
+                                <p>One of Student Government’s largest committees, the Sustainability committee helps look
+                                    at ways to increase sustainable actions on campus</p>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 col-12">
+                    <h2 class="mb-4 mobile-mt-2">Services</h2>
+    
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2014</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Miyapedia</span></h3>
+                                <p>MiyaPedia is the place to go for information about the Miyagi community. Created for
+                                    students by students, MiyaPedia was originally project to create an online resource for
+                                    new students.</p>
+                            </div>
+                        </div>
+    
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2015</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Finance Requests</span></h3>
+                                <p>Student Government provides funding to clubs and organizations through the Application
+                                    for Additional Funds (AFAF) process. Funds are available through SG Finance Committee,
+                                    Greek Finance Committee, and Sports Federation.</p>
+                            </div>
+                        </div>
+    
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2015</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Legal Aid</span></h3>
+                                <p>Student Government has an attorney who is available to provide free legal advice to
+                                    students. Sign up for an appointment by visiting or calling the SG office or through the
+                                    CampusGroups app.</p>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="container mt-3" style="text-align:center; justify-content: center; display: flex;">
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="{% static 'university/images/uni.jpg' %}" alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">MIYAGI</h4>
+                <p class="card-text">Miyagi is one of the leading universities in Japan</p>
+                <div class="container">
+                    
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn text-white" style="background-color: #474559;" data-toggle="modal" data-target="#myModal">
+                        Read More
+                    </button>
+                
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title pl-5">INTELLECTUAL ELITE OF JAPAN</h4>
+                                    
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                Living in a comfortable environment (amenities), and having heartwarming human relationships (hospitality),
+                                    are wishes of all human beings. In order to realize communities with comforts and a heartwarming environment,
+                                    Miyagi University explores the conditions and meanings of “hospitality” and “amenity”. Accordingly,
+                                    MYU promotes education and research based on “advanced practical science”, integrating and unifying various
+                                    disciplines and technologies in order to respond to demands of society.
+                                </div>
+                
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{% static 'university/css/member.css' %}">
+    <title> Our Team</title>
+</head>
+<body >
+
+
+
+<!----------------------
+        	 			Nav area start
+        	 				Menu
+        	 				-------------------- -->
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: white;">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'about_us' %}"><i class='uil uil-user'></i> Student</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a href="{% url 'about_us' %}" class="nav-link"><span data-hover="About us">About us</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'organizations' %}" class="nav-link"><span
+                            data-hover="Organizations">Organizations</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'blog' %}" class="nav-link"><span data-hover="Blog">Blog</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contact_us' %}" class="nav-link"><span data-hover="Contact us">Contact us</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'member' %}" class="nav-link"><span data-hover=" Our Team">Our Team</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'create' %}" class="nav-link"><span data-hover="Create">Create</span></a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-lg-auto">
+                <div class="ml-lg-4">
+                    <div class="login d-lg-flex justify-content-center align-items-center">
+                        <li class="nav-item">
+                            <a href="{% url 'login' %}" class="nav-link"><span data-hover="Login">Login</span></a>
+                        </li>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-------------------------------OUR-TEAM------------------------------>
+<div class="our_team">
+    <div class="container">
+        <div class="team">
+            <div class="team_member">
+                <div class="member_img_block">
+                    <img src="{% static 'university/images/todo.jpeg' %}" alt="photo" class="member_img">
+                </div>
+                <div class="team_member_info">
+                    <h2 class="member_name">{{ member1.name }} {{ member1.surname }}</h2>
+                    <h4 class="member_info">{{ member1.phone }}</h4>
+                    <h4 class="member_info">{{ member1.email }}</h4>
+                </div>
+            </div>
+
+            <div class="team_member">
+                <div class="member_img_block">
+                    <img src="{% static 'university/images/maki.jpeg' %}" alt="photo" class="member_img">
+                </div>
+                <div class="team_member_info">
+                    <h2 class="member_name">{{ member2.name }} {{ member2.surname }}</h2>
+                    <h4 class="member_info">{{ member2.phone }}</h4>
+                    <h4 class="member_info">{{ member2.email }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------------OUR-TEAM-END--------------------------->
+
+
+<!------------------------------
+                					 FOOTER
+                					 ------------------------------- -->
+<footer class="footer py-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 col-12">
+                <p class="copyright-text text-center">Copyright &copy; 2021 . All rights reserved</p>
+                <p class="copyright-text text-center">Designed by Kodzuken & Todo</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

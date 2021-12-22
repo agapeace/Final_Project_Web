@@ -1,0 +1,14 @@
+{% extends 'university/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div style=" width: 100%; margin-left: 600px; padding-top: 50px; margin-bottom: 100px" >
+    <h1>{{ stud.name }}</h1>
+    <h5>{{ stud.surname }}</h5>
+    <h5>{{ stud.age }}</h5>
+    <h5>{{ stud.gpa }}</h5>
+    <h5>{{ stud.comment }}</h5>
+    <a href="{% url 'DeleteView' stud.id %}" class="btn" style="background-color: #ffc200;">Delete</a>
+    <a href="{% url 'UpdateView' stud.id %}" class="btn btn-dark">Update</a>
+    </div>
+{% endblock %}

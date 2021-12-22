@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sign Up</title>
+    <link rel="shortcut icon" href="{% static 'movies/images/logo.png' %}" type="image/png">
+	<link rel="stylesheet" href="{% static 'movies/css/home_page.css' %}">
+	<link rel="stylesheet" href="{% static 'movies/css/sign_in.css' %}">
+	<link rel="shortcut icon" href="{% static 'movies/images/A-logo2.png' %}" type="image/png">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+	<div class="full_bg">
+		<div class="container">
+			<div class="sign_box" style="padding: 0">
+				<form action="" method="post" class="form">
+                    {% csrf_token %}
+					<a href="{% url 'about_us' %}" class="logo">Student</a>
+
+                    {{ form.errors }}
+
+                    <div class="input_form">
+						{{ form.username }}
+					</div>
+
+					<div class="input_form">
+                        {{ form.email }}
+					</div>
+
+					<div class="input_form">
+						{{ form.password1 }}
+					</div>
+
+                    <div class="input_form">
+						{{ form.password2 }}
+					</div>
+
+					<button type="submit" class="sign_button" >Sign Up</button>
+
+					<span class="sign_delimiter">or</span>
+
+					<div class="sign_social">
+						<a class="fb" href="#">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a class="tw" href="#">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a class="gl" href="#">
+							<i class="fab fa-google"></i>
+						</a>
+					</div>
+
+					<span class="sign_text">
+						Already have an account?
+						<a href="{% url 'sign_in' %}" class="sign_link">Sign in!</a>
+					</span>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

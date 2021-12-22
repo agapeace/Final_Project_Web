@@ -1,0 +1,10 @@
+{% extends 'university/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <form method="post" style="padding-top: 100px; width: 100%; display: flex">
+        {% csrf_token %}
+        <button class="btn btn-dark" style="margin: 0 auto" type="submit">Delete</button>
+    </form>
+{% endblock %}

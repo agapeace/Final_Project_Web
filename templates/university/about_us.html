@@ -1,0 +1,43 @@
+{% extends 'university/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- ABOUT -->
+        <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                        <div class="about-text">
+                            <small class="small-text">Welcome to <span class="mobile-block">student department's
+                                    website!</span></small>
+                            <h1 class="animated animated-text">
+                                <span class="mr-2">Hey guys, we are</span>
+                                <div class="animated-info">
+                                    <span class="animated-item">bright</span>
+                                    <span class="animated-item">uniqe</span>
+                                    <span class="animated-item">different</span>
+                                </div>
+                            </h1>
+        
+                            <p>But we are all united by the fact that we are all students. Living a busy and unpredictable life,
+                                we are always moving somewhere. So let's move forward together!</p>
+        
+                            <div class="custom-btn-group mt-4">
+                                <a href="#" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i>My account</a>
+                                <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Join request</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-5 col-md-12 col-12">
+                        <div class="about-image svg">
+                             <img src="{% static 'university/images/main_students.jpg' %}" class="img-fluid" alt="svg image">
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
